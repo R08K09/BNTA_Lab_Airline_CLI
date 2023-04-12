@@ -7,14 +7,13 @@ public class Flight {
     private String destination;
     private LocalTime flight_time;
     private ArrayList<Passenger> passengers;
-    private ArrayList<Flight> flights;
 
-    public Flight(String flight_ID, String destination, LocalTime flight_time, ArrayList<Passenger> passengers, ArrayList<Flight> flights){
+    public Flight(String flight_ID, String destination, LocalTime flight_time){
         this.flight_ID = flight_ID;
         this.destination = destination;
         this.flight_time = flight_time;
-        this.passengers = passengers;
-        this.flights = flights;
+        this.passengers = new ArrayList<>();
+
     }
 
     // getters
@@ -34,9 +33,6 @@ public class Flight {
         return this.passengers;
     }
 
-    public ArrayList<Flight> getFlights(){
-        return this.flights;
-    }
 
     // setters
     public void setFlight_ID(String flight_ID){
@@ -51,24 +47,14 @@ public class Flight {
         this.flight_time = flight_time;
     }
 
-
     // methods
-    public void addFlight(Flight flight){
-        flights.add(flight);
-    }
-
-    public void cancelFlight(Flight flight){
-        flights.remove(flight);
-    }
     
     public void addPassenger(Passenger passenger){
         passengers.add(passenger);
     }
 
-    public void displayFlights(){
-        for(Flight flight : flights){
-            System.out.println(flight);
-        }
+    public int getPassengerSize(){
+        return this.passengers.size();
     }
 
 }

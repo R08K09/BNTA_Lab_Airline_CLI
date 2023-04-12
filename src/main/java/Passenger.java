@@ -1,12 +1,12 @@
 public class Passenger {
 
     private String name;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String passenger_ID;
 
 
-    public Passenger(String name, int phoneNumber, String email, String passenger_ID) {
+    public Passenger(String name, String phoneNumber, String email, String passenger_ID) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -19,7 +19,7 @@ public class Passenger {
         return this.name;
     }
 
-    public int getPhoneNumber(){
+    public String getPhoneNumber(){
         return this.phoneNumber;
     }
 
@@ -37,7 +37,7 @@ public class Passenger {
         this.name = name;
     }
 
-    public void setPhoneNumber(int phoneNumber){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
 
