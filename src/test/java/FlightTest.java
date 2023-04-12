@@ -20,8 +20,6 @@ public class FlightTest {
         passengerTwo = new Passenger("Jane Doe", "07964222112", "JaneDoe@gmail.com", "JD98765");
         flightOne.addPassenger(passengerOne);
         flightOne.addPassenger(passengerTwo);
-
-
     }
 
     @Test

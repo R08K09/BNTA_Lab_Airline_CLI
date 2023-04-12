@@ -26,17 +26,21 @@ public class Airport {
     }
 
 //    methods:
-public void displayFlights() {
-    for (Flight flight : flights) {
-        System.out.println(flight);
+    public void displayFlights() {
+        for (Flight flight : flights) {
+            System.out.println(flight);
+        }
     }
-}
     public void addFlight(Flight flight){
         flights.add(flight);
     }
 
     public void cancelFlight(Flight flight){
         flights.remove(flight);
+    }
+
+    public int getNumberOfFlights(){
+        return this.flights.size();
     }
 
 }
