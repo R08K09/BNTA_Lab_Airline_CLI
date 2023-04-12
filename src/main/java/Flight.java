@@ -58,4 +58,13 @@ public class Flight {
         return this.passengers.size();
     }
 
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "flight_ID='" + flight_ID + '\'' +
+                ", destination='" + destination + '\'' +
+                ", flight_time=" + flight_time +
+                ", passengers=" + passengers +
+                '}';
+    }
 }

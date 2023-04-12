@@ -49,5 +49,13 @@ public class Passenger {
         this.passenger_ID = passenger_ID;
     }
 
-
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "name='" + name + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", passenger_ID='" + passenger_ID + '\'' +
+                '}';
+    }
 }
