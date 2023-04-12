@@ -41,9 +41,10 @@ public class Runner {
 
 
         Scanner scanner = new Scanner(System.in);
+        // Display user options
+        System.out.println(String.format("Welcome to %s", airport.getAirportName()));
+        
         while (true) {
-            // Display user options
-            System.out.println(String.format("Welcome to %s", airport.getAirportName()));
             System.out.println("Option 1: Add a new flight");
             System.out.println("Option 2: Display all available flights");
             System.out.println("Option 3: Book a passenger onto a flight");
