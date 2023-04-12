@@ -5,6 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class FlightTest {
 
@@ -16,8 +17,8 @@ public class FlightTest {
     public void setUp(){
         localTimeOne = LocalTime.of(13, 30);
         flightOne = new Flight("BA123", "Rome", localTimeOne);
-        passengerOne = new Passenger("John Smith", "07239135820", "JohnSmith@gmail.com", "JS12345");
-        passengerTwo = new Passenger("Jane Doe", "07964222112", "JaneDoe@gmail.com", "JD98765");
+        passengerOne = new Passenger("John Smith", "07239135820", "JohnSmith@gmail.com", UUID.randomUUID());
+        passengerTwo = new Passenger("Jane Doe", "07964222112", "JaneDoe@gmail.com", UUID.randomUUID());
         flightOne.addPassenger(passengerOne);
         flightOne.addPassenger(passengerTwo);
     }
@@ -57,7 +58,7 @@ public class FlightTest {
 
     @Test
     public void canAddPassengers(){
-        Passenger passengerThree = new Passenger("Anna Phillips", "07827373737", "AnnaPh@gmail.com", "AP2468");
+        Passenger passengerThree = new Passenger("Anna Phillips", "07827373737", "AnnaPh@gmail.com", UUID.randomUUID());
         flightOne.addPassenger(passengerThree);
         assertThat(flightOne.getPassengerSize()).isEqualTo(3);
     }

@@ -60,4 +60,12 @@ public class Airport {
         }
     }
 
+    public void searchForFlight(String destination){
+        for(Flight flight: flights){
+            if(flight.getDestination().equals(destination)){
+                System.out.println(flight);
+            }
+        }
+    }
+
 }

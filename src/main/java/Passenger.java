@@ -1,16 +1,17 @@
+import java.util.UUID;
 public class Passenger {
 
     private String name;
     private String phoneNumber;
     private String email;
-    private String passenger_ID;
+    private UUID passenger_ID;
 
 
-    public Passenger(String name, String phoneNumber, String email, String passenger_ID) {
+    public Passenger(String name, String phoneNumber, String email, UUID passenger_ID) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.passenger_ID = passenger_ID;
+        this.passenger_ID = UUID.randomUUID();
     }
 
 
@@ -27,7 +28,7 @@ public class Passenger {
         return this.email;
     }
 
-    public String getPassenger_ID(){
+    public UUID getPassenger_ID(){
         return this.passenger_ID;
     }
 
@@ -45,7 +46,7 @@ public class Passenger {
         this.email = email;
     }
 
-    public void setPassenger_ID(String passenger_ID){
+    public void setPassenger_ID(UUID passenger_ID){
         this.passenger_ID = passenger_ID;
     }
 
@@ -58,4 +59,7 @@ public class Passenger {
                 ", passenger_ID='" + passenger_ID + '\'' +
                 '}';
     }
+
+//    method
+
 }
