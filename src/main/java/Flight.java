@@ -53,6 +53,7 @@ public class Flight {
         passengers.add(passenger);
     }
 
+
     public int getPassengerSize(){
         return this.passengers.size();
     }

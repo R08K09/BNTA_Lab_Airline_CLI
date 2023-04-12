@@ -27,20 +27,37 @@ public class Airport {
 
 //    methods:
     public void displayFlights() {
-        for (Flight flight : flights) {
-            System.out.println(flight);
+//        for (Flight flight : flights) {
+//            System.out.println(flight);
+//        }
+        for (int i = 0; i < flights.size(); i++){
+            System.out.println(flights.get(i));
         }
     }
     public void addFlight(Flight flight){
         flights.add(flight);
     }
 
-    public void cancelFlight(Flight flight){
-        flights.remove(flight);
+    public void cancelFlight(String flight_ID){
+        for(Flight flight : flights) {
+            if(flight.getFlight_ID().equals(flight_ID)){
+                flights.remove(flight);
+                break;
+            }
+        }
     }
 
     public int getNumberOfFlights(){
         return this.flights.size();
+    }
+
+    public void addPassengerToFlight(String flight_ID, Passenger passenger){
+        for(Flight flight : flights) {
+            if(flight.getFlight_ID().equals(flight_ID)){
+                flight.addPassenger(passenger);
+                break;
+            }
+        }
     }
 
 }
